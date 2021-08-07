@@ -1,0 +1,401 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.4em;
+  margin: 0 70px;
+}
+
+.header {
+  background: linear-gradient(#090A0D, #CA0C00);
+  height: 70px;
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.logo_name{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  margin-top: 64px;
+}
+.logo_name p{
+  line-height:2px;
+}
+p.greeting{
+  margin: -5px;
+  font-size: 1em;
+  font-weight: bold; 
+}
+p.name{
+  font-size: 2em;
+  font-weight: bold;
+}
+/*ajusto el logo de mi emoji*/
+.Logo {
+  width: 160px;
+  height: 150px;
+  display: flex;
+  margin: -14px -44px 0px -19px;
+}
+@media (max-width: 768px){
+  .header{
+    position: relative;
+    background: linear-gradient(#090A0D, #CA0C00);;
+    height: 40px;
+    width: 100%;
+  }
+  .logo_name p{
+    text-align: center;
+    margin-top: 40px;
+    line-height:2px;
+  }
+  p.greeting{ 
+    font-size: 0.8em;
+    margin: -10px;
+  }
+  p.name{ 
+    font-size: 1em;
+  }
+  .Logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin: 5px -80px 0px 25px;
+  }
+}
+@media (max-width: 525px){
+  body {
+    margin: 0 20px;
+  }
+  .header {
+    position: relative;
+    background: linear-gradient(#090A0D, #CA0C00);;
+    height: 40px;
+    width: 100%;
+  }
+  .logo_name {
+    text-align: center;
+    margin-top: 20px;
+    margin-top: 45px;
+  }
+  p.greeting { 
+    font-size: 0.6em;
+  }
+  p.name { 
+    font-size: 1em;
+  }
+  .Logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    margin: 4px -25px 0px -22px;
+  }
+}
+.menu_hamburguesa {
+  width: 100%;
+  background: linear-gradient(#090A0D, #CA0C00);
+}
+/*con el none nos aseguramos que no aparezca el menu hamburguesa cuando estamos en una pantalla superior a 768px*/
+#btn-menu {
+  display: none;
+}
+.menu_hamburguesa label {
+  display: none;
+  width: 45px;
+  height: 46px;
+  padding: 5px;
+  border-right: 1px solid #ffff;
+}
+.menu_hamburguesa label:hover {
+  cursor: pointer;
+  background: rgba(236, 232, 232, 0.3);
+}
+.menu_hamburguesa ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.menu_hamburguesa li {
+  flex-grow: 1;
+  text-align: center;
+}
+.menu_hamburguesa li:hover {
+  background: rgba(218, 213, 213, 0.3);
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+}
+.menu_hamburguesa li a {  
+  display: block;
+  padding: 15px 20px;
+  color: #ffff;
+  text-decoration: none;
+}
+/*responsive, se activa el display que se habia dejado oculto con none
+y lo activamos con block al momento que la pantalla sea de un ancho max de 768px*/
+@media (max-width:768px) {
+  .menu_hamburguesa label {
+    display:block;
+    width: 100%;
+  }
+  .menu {
+    position: absolute;
+    background: linear-gradient(#090A0D, #CA0C00);;
+    width: 81.8%;
+    height: 90%; 
+    margin-left: -100%;
+    transition: all 1s;
+  }
+  .menu_hamburguesa ul {
+    flex-direction: column;
+  }
+}
+.menu_hamburguesa li {
+  border-top: 1px solid #fff;
+}
+/*cuando el btn-menu del html tenga el check buscara la clase .menu,
+esto para que al dar clic me muestre el menu*/
+#btn-menu:checked ~ .menu {
+  margin: 0;
+}
+@media (max-width:525px) {
+  .menu_hamburguesa label {
+    display:block;
+  }
+  .menu {
+    position: absolute;
+    background: linear-gradient(#090A0D, #CA0C00);;
+    width: 89%;
+    height: 90%; 
+    margin-left: -100%;
+    transition: all 1s;
+  }
+  .menu_hamburguesa ul {
+    flex-direction: column;
+  }
+}
+.menu_hamburguesa li {
+  border-top: 1px solid #fff;
+}
+/*cuando el btn-menu del html tenga el check buscara la clase .menu,
+esto para que al dar clic me muestre el menu*/
+#btn-menu:checked ~ .menu {
+  margin: 0;
+}
+/*presentacion*/
+.container_all {
+  width: 100%;
+  margin: auto;
+  padding: 2rem 0;
+  margin-top: 40px;
+}
+.title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #96150E;
+}
+.my-photo img {
+  padding: -15px; margin: 0px; float: left; width: 250px;
+}
+.container_all p {
+  font-size: 18px;
+  font-weight: 300;x
+}
+@media (max-width: 768px){
+  .container_all{
+    margin-top: 15px;
+  }
+  .title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 411px){
+  .container_all{
+    margin-top: 15px;
+  }
+  .title {
+    font-size: 32px;
+  }
+}
+.container-skills {
+  justify-content :center;
+  margin-top: 45px;
+}
+
+.container-skills h2 {
+  text-align: center;
+  color: #96150E;
+  font-size: 30px;
+}
+.container-skills img {
+  align-items: center;
+  margin: -10px 100px 70px -40px;
+}
+.emoji img{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contenedor-galeria {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+.galeria_img {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 30px;
+  object-fit: cover;
+  filter: brightness(70%);
+  animation: escalar 1.5s infinite alternate;
+}
+
+@keyframes escalar {
+  to {
+    transform:scale(1);
+  }
+  from {
+    transform: scale(1.05);
+  }
+}
+.galeria_img:hover {
+  filter: brightness(120%)
+}
+.container-skills {
+  justify-content: center;
+}
+.title2 {
+  color: #96150E;
+  text-align: center;
+}
+
+/* Slider proyectos*/
+.slider {
+   width: 65%;
+   margin: auto;
+   overflow: hidden;
+}
+.slider ul {
+  padding: 0;
+  display: flex;
+  width: 300%;
+  
+  animation: cambio 5s infinite;
+  animation-direction: alternate;
+}
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+.slider img {
+  width: 100%;
+}
+@keyframes cambio {
+  0% { margin-left: 0;}
+  33% { margin-left: 0;}
+
+  38% {margin-left: -100%;}
+  67% { margin-left: -100%;}
+
+  72% {margin-left: -200%;}
+  100% { margin-left: -200%;}
+}
+.container_fo {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style: none;
+}
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+.footer-col {
+  width: 30%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  position: relative;
+}
+.footer-col h4::before {
+  content: '';
+  position:absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 10px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+/*responsive*/
+@media(max-width:767px) {
+  .footer-col {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+}
+@media(max-width:574px) {
+  .footer-col {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+}
